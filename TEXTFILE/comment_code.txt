@@ -1,0 +1,121 @@
+# from numpy import array
+# Arr = array([0 for i in range(0, Maxstk)])
+
+
+
+
+
+
+
+
+
+
+# print(temp3[::-1])
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# print("For Adiition Enter: 0000")
+# print("For subtraction Enter: 0001")
+# print("For Multiplication Enter: 0010")
+# print("For Division Enter: 0011")
+# print()
+#
+# operator = str(input("Enter a OPERATOR BINARY: "))
+# if operator == "0000":
+#     result = number_decimal + number_decimal
+#     print("After Addition: " , result)
+#
+# elif operator == "0001":
+#     result = number_decimal - number_decimal
+#     print("After Addition: ", result)
+#
+# elif operator == "0010":
+#     result = number_decimal * number_decimal
+#     print("After Addition: ", result)
+#
+# elif operator == "0011":
+#     result = int(number_decimal / number_decimal)
+#     print("After Addition: ", result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# string = ""
+#
+# if str(result) < 0:
+#     result = -(result)
+#     while result !=0:
+#         a = result % 2
+#         string += string(a)
+#         result = result // 2
+#     s = string
+#     string = ""
+#     for i in range(0,len(s)-1, -1, -1):
+#         string += s[i]
+#
+#     s = ""
+#     for j in range(len(string)-1, -1, -1):
+#         if string[j] == 1:
+#             s = string.split(string[j],len(string)-1)
+#     for k in range(0, len(string)):
+#         if string[k] == 0:
+#             string = "1"
+#         elif string[k] == 1:
+#             string[k] = "0"
+#
+#     string = string + s
+#     Arr = [number_decimal, number1_decimal, operator, address_decimal]
+#     print(Arr)
+#
+# elif result > 0:
+#     while result !=0:
+#         a =  result % 2
+#         string  += str(a)
+#         result  = result // 2
+#     s = string
+#     string = ""
+#     for i in range(len(s)-1, -1, -1):
+#         string += s[i]
+#
+#     Arr = [number_decimal, number1_decimal, operator, address_decimal]
+#     print(Arr)
+#
+#
+#
+#
+#
+#
+#
+
+# print('In binary format: ', result)

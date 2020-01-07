@@ -1,0 +1,4 @@
+C:\Users\SharozRaees\Desktop\DSA-LAb-THEORY\sir_zubair\sir_zubair\bin\Debug\sir_zubair.exe
+C:\Users\SharozRaees\Desktop\DSA-LAb-THEORY\sir_zubair\sir_zubair\bin\Debug\sir_zubair.pdb
+C:\Users\SharozRaees\Desktop\DSA-LAb-THEORY\sir_zubair\sir_zubair\obj\x86\Debug\sir_zubair.exe
+C:\Users\SharozRaees\Desktop\DSA-LAb-THEORY\sir_zubair\sir_zubair\obj\x86\Debug\sir_zubair.pdb

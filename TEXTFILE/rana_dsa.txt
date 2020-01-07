@@ -1,0 +1,171 @@
+class Node:
+
+    def __init__(self, word, meaning):
+        self.data1 = word
+        self.data2 = meaning
+        self.Next = None
+
+
+    def Print(self):
+
+        f = open('wordsss.txt','a+')
+        if self.Next is not None:
+
+            f.write(self.data1,self.data2)
+            print("app ka dia hoa alfaz lugat m likh dia gaya ha")
+            self.Next.Print()
+
+class LinkedList:
+    ItemCount=0
+    Start=None
+    Curr=None
+    def read_word(self):
+        file = open("wordsss.txt",'r')
+        lines = file.readlines()
+        file.close()
+        count = 1
+        for line in lines:
+            for i in range(len(lines)-1):
+               for j in range(len(lines)-1-i):
+                    if lines[j] > lines[j+1]:
+                        temp = lines[j]
+                        lines[j] = lines[j+1]
+                        lines[j+1] = temp
+            temp = line.split(',')
+            word = temp[0].replace('\'','')
+            meaning = temp[1].replace('\n','')
+            var ={
+                'word': word,
+                'meaning': meaning
+            }
+            print(count, var)
+            count += 1
+    def __init__(self):
+        self.Start = None
+
+    def __int__(self, word, meaning):
+        self.Start= Node(word,meaning)
+
+    def APPEND(self, word, meaning):
+        if self.Start is None:
+            self.Start = Node(word,meaning)
+        else:
+            pointer = self.Start
+            while pointer.Next != Node:
+                pointer=pointer.Next
+                pointer.Next = Node(word,meaning)
+        user_data = '{}, {}\n'.format(word,meaning)
+        f = open("wordsss.txt",'a+')
+        f.write(user_data)
+
+    def AddWordshow(self, word, meaning):
+       self.ItemCount=self.ItemCount+1
+       self.temp= Node(word,meaning)
+
+       if self.Start is None:
+            self.Start = self.temp
+            self.Curr=self.Start
+       else:
+        self.Curr.Next = self.temp
+        self.Curr = self.Curr.Next
+
+
+
+
+    def ShowWord(self,word):
+        found=0
+        print("==================")
+        meaning=""
+        if self.Start is None:
+            print("NO word in a list")
+        else:
+            self.CurrNode = self.Start
+            for i in range(0, self.ItemCount):
+            # try:
+              if(word in self.CurrNode.data1):
+                if(self.CurrNode.data1.index(word)==0):
+                        meaning=""
+                        meaning=self.CurrNode.data2
+                        print(self.CurrNode.data1+" "+meaning)
+                        found= found+1
+                self.CurrNode=self.CurrNode.Next
+              else:
+                    self.CurrNode=self.CurrNode.Next
+                    meaning=""
+
+             #except ValueError:
+             #    print("error")
+              #   return
+           # self.Start.Print()
+            if(found == 0):
+                print("Error -1. NoT Found")
+
+
+class All:
+    aj = LinkedList()
+    hn = LinkedList()
+    oz = LinkedList()
+
+    def Read(self):
+        file = open('wordsss.txt','r')
+        lines = file.readlines()
+        file.close()
+        count = 1
+        for line in lines:
+            temp = line.split(',')
+            word = temp[0].replace('\'','')
+            meaning = temp[1].replace('\n','')
+            var ={
+                'word': word,
+                'meaning': meaning
+            }
+            count += 1
+            if(ord(word[0]) > 110):
+                self.oz.AddWordshow(word,meaning)
+            elif(ord(word[0]) > 107):
+                self.hn.AddWordshow(word,meaning)
+            else:
+                self.aj.AddWordshow(word,meaning)
+
+
+
+
+    def Show(self,word):
+        if(ord(word[0]) > 110):
+             self.oz.ShowWord(word)
+        elif(ord(word[0]) > 107):
+            self.hn.ShowWord(word)
+        else:
+            self.aj.ShowWord(word)
+
+test= All()
+meri_marzi =LinkedList()
+
+while True:
+    print("four functionality you use it: ")
+    print("press:1 read:")
+    print("press:2 search a character:")
+    print("press:3 add word & meaning:")
+    print("press: 4 exit: ")
+    c = int(input(">>: "))
+    if c == 1:
+        print("welcome to Read_option")
+        meri_marzi.read_word()
+    elif c ==2:
+        print("welcome search_option")
+        print()
+        w = str(input("enter a sigle character:"))
+        test.Show(w)
+    elif c ==3:
+        print("welcome APPEND_OPTION")
+        print()
+        w=str(input("enter tu kr word kr: "))
+        m=str(input("meaning tu dalo: "))
+        meri_marzi.APPEND(w,m)
+    elif c ==4:
+        break
+    else:
+        print("invalid option select")
+
+
+

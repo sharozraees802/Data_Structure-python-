@@ -1,0 +1,28 @@
+array
+2d array
+sorting
+searching
+linked list
+doubly linked list
+stack
+recursion
+asynth notation
+quene
+binary tree
+hash
+
+
+
+def Cal_len(string):
+    # Using splitlines() divide into a list
+    li = string.splitlines()
+    print(li)
+
+    # Calculate length of each word
+    l = [len(element) for element in li]
+    return l
+
+
+# Driver Code
+string = "sharoz\rraees\rhello"
+print(Cal_len(string))

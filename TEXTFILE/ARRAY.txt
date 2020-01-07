@@ -1,0 +1,314 @@
+import numpy as Array
+from timeit import Timer
+# 1.08
+# Numbers = Array.array([11,22,33,44,55])
+# for i in range(len(Numbers)):
+#     print(Numbers[i], end=" " )
+# Index = int(input("Enter Index where you want to add Value: "))
+# value = int(input(f"Enter Value of Index {Index}:"))
+# temp = Array.array([0 for i in range(len(Numbers)+1)])
+# j = 0
+# for i in range(len(temp)):
+#     if i == Index:
+#         temp[i] = value
+#     else:
+#         temp[i] = Numbers[j]
+#         j +=1
+# Numbers = temp
+# for i in range(len(Numbers)):
+#     print(Numbers[i], end=" ")
+# print("Array  Length is :", len(Numbers))
+
+
+# 1.09
+# def delete(LA,N,k):
+#     j = k + 1
+#     while j < N:
+#         LA[j-1] = LA[j]
+#         j +=1
+#     N = N -1
+#     return N
+# LA = Array.array([0 for i in range(20)])
+# N = int(input("Enter A Array Length "))
+# for i in range(N):
+#     LA[i] = int(input(f"Enter Value of index: {(i + 1)}: "))
+# print("-------------")
+# for i in range(N):
+#     print(LA[i], end=" ")
+#
+# k = int(input("Enter element index which you want to remove: "))
+# N = delete(LA, N, k)
+#
+# for i in range(N):
+#     print(LA[i], end=" ")
+
+# 1.10
+
+Numbers = Array.array([11,12,13,14,15])
+
+for i in range(len(Numbers)):
+    print(Numbers[i], end=" ")
+Index = int(input("Enter element index which you want to delete "))
+Temp = Array.array([0 for i in range(len(Numbers)-1)])
+j =0
+for i in range(len(Numbers)):
+    if  i == Index:
+        continue
+    else:
+         Temp[j] = Numbers[i]
+         j +=1
+         Numbers = Temp
+for i in range(len(Numbers)):
+    print(Numbers[i], end = " ")
+# 1.11
+
+import numpy as np
+
+
+#Bubble sort:
+
+# Numbers = np.array([1,5,2,4,3,6])
+# count1 = 0
+# print(Numbers)
+#
+# for i in range(len(Numbers) - 1):
+#     count1 += 1
+#     for j in range(len(Numbers) -1 -i):
+#         count1 += 1
+#         if Numbers[j] > Numbers[j+1]:
+#             temp = Numbers[j]
+#             Numbers[j] = Numbers[j +1]
+#             Numbers[j +1] =temp
+#
+#
+# print(Numbers)
+# print(count1)
+
+# buuble short with flag
+
+# Numbers = np.array([1,2,4,3,5,6])
+#
+# print(Numbers)
+#
+# count = 0
+# count1 = 0
+# for i in range(len(Numbers) - 1):
+#     count +=1
+#     flag = False
+#     for j in range(len(Numbers) -1 -i):
+#         count += 1
+#         if Numbers[j] > Numbers[j+1]:
+#             temp = Numbers[j]
+#             Numbers[j] = Numbers[j +1]
+#             Numbers[j +1] =temp
+#             flag = True
+#     if  (not flag):
+#         break
+#
+# print(Numbers)
+# print(count)
+
+# Sorting Strng Array:
+# Numbers = np.array(['pakistan','America','China'],dtype=object)
+# count1 = 0
+# print(Numbers)
+#
+# for i in range(len(Numbers) - 1):
+#     count1 += 1
+#     for j in range(len(Numbers) -1 -i):
+#         count1 += 1
+#         if Numbers[j] > Numbers[j+1]:
+#             temp = Numbers[j]
+#             Numbers[j] = Numbers[j +1]
+#             Numbers[j +1] =temp
+#
+#
+# print(Numbers)
+# print(count1)
+
+
+
+# selection sort
+
+# Numbers = np.array([20,8,5,10,5])
+# print(Numbers,end=" ")
+# for i in range(len(Numbers)):
+#     min_index = i
+#     for j in range(i + 1, len(Numbers)):
+#         if Numbers[min_index] > Numbers[j]:
+#             min_index = j
+#     temp = Numbers[i]
+#     Numbers[i] = Numbers[min_index]
+#     Numbers[min_index] = temp
+#
+# for i in range(len(Numbers)):
+#     print(Numbers[i],end=" ")
+
+
+# if use
+
+# Numbers = np.array([20,8,5,10,5])
+# print(Numbers,end=" ")
+# for i in range(len(Numbers)):
+#     min_index = i
+#     for j in range(i + 1, len(Numbers)):
+#         if Numbers[min_index] > Numbers[j]:
+#             min_index = j
+#     if (Numbers[min_index] != Numbers[i]):
+#         temp = Numbers[i]
+#         Numbers[i] = Numbers[min_index]
+#         Numbers[min_index] = temp
+#
+# for i in range(len(Numbers)):
+#     print(Numbers[i],end=" ")
+
+
+# INSERTION SORT:
+
+# Number = np.array([12,11,13,5,6])
+#
+# for i in range(1, len(Number)):
+#
+#     Key = Number[i]
+#     j = i - 1
+#
+#     while j >=0 and Key < Number[j]:
+#
+#         Number[j + 1] = Number[j]
+#         j -=1
+#     Number[j +1] = Key
+#
+# for i in range(len(Number)):
+#     print(Number[i],end=" ")
+
+#Counting sort
+
+# Arr = np.array([5, 3, 2, 5, 3, 1, 7])
+# count = np.array([0 for i in range(10)])
+# for i in range(len(Arr)):
+#     count[Arr [i]] += 1
+# print(count)
+# for i in range(1, len(count)):
+#     count[i] += count[i - 1]
+# print(count)
+# SortArr = np.array([0 for i in range (len(Arr))])
+#
+# for i in range(len(Arr)):
+#     SortArr[count[Arr[i]] - 1] = Arr[i]
+#     count[Arr[i]] -= 1
+# print(SortArr)
+
+
+
+
+
+import numpy as np
+
+# INSERTION SORT
+# Number = np.array([12, 11, 13, 5, 6])
+#
+# for i in range(1, len(Number)):
+#
+#     Key = Number[i]
+#     j = i - 1
+#
+#     while j >= 0 and Key < Number[j]:
+#         Number[j + 1] = Number[j]
+#         j -= 1
+#     Number[j + 1] = Key
+#
+# for i in range(len(Number)):
+#     print(Number[i], end=" ")
+
+
+
+
+
+#Counting sort
+
+# Arr = np.array([5, 3, 2, 5, 3, 1, 7])
+# count = np.array([0 for i in range(10)])
+# for i in range(len(Arr)):
+#     count[Arr [i]] += 1
+# print(count)
+# for i in range(1, len(count)):
+#     count[i] += count[i - 1]
+# print(count)
+# SortArr = np.array([0 for i in range (len(Arr))])
+#
+# # for i in range(len(Arr)):
+# #     SortArr[count[Arr[i]] - 1] = Arr[i]
+# #     count[Arr[i]] -= 1
+#
+# for i in range(len(Arr)):
+#     count[Arr[i]] -= 1
+#     SortArr[count[Arr[i]]] = Arr[i]
+# print(SortArr)
+
+# LINEAR Search
+
+# Arr = np.array([55, 3, 2, 5, 33, 1, 7])
+# print(Arr)
+# num = str(input("enter a  index: "))
+# Flag = False
+# num = int(input("enter a number index: "))
+# for i in range(len(Arr)):
+#     if num == Arr[i]:
+#         Flag = True
+#         break
+# if Flag:
+#     print("Number found index: " + str(i))
+#
+# else:
+#     print("not found")
+
+
+# string
+
+# Arr = np.array(["Umer","Ali","Saqib","Faraz"])
+# print(Arr)
+# num = str(input("enter a  index: "))
+# Flag = False
+# for i in range(len(Arr)):
+#     if num == Arr[i]:
+#         Flag = True
+#         break
+# if Flag:
+#     print("Number found index: " + str(i))
+#
+# else:
+#     print("not found")
+
+
+# BINARY SEARCH
+
+Arr = np.array([21,22,23,24,25,26,28,29,30,31,33])
+print(Arr)
+
+Falg = False
+first = 0
+last = len(Arr) - 1
+
+Value = int(input("enter a number: "))
+
+while(first <= last):
+
+    mid = int((first + last)/2)
+
+    if  Value == Arr[mid]:
+        Falg = True
+        break
+
+
+    elif Value < Arr[mid]:
+        last = mid -1
+
+    elif Value > mid:
+        first = mid +1
+
+
+if Falg:
+    print("Number found index: " + str(mid))
+
+else:
+    print("not found")
